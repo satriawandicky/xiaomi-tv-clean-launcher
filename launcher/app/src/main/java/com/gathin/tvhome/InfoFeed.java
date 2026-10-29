@@ -52,8 +52,7 @@ final class InfoFeed {
     private int wallIndex = -1;
 
     InfoFeed(Context ctx, String teamId, String teamLeague, String leagueName) {
-        File d = ctx.getExternalFilesDir(null);
-        dir = new File(d != null ? d : ctx.getFilesDir(), "feed");
+        dir = new File(Config.dir(ctx), "feed");
         dir.mkdirs();
         this.teamId = teamId;
         this.teamLeague = teamLeague;
@@ -209,8 +208,7 @@ final class InfoFeed {
 
     /** Every downloaded wallpaper, for the screensaver. */
     static List<File> walls(Context ctx) {
-        File d = ctx.getExternalFilesDir(null);
-        File[] walls = new File(d != null ? d : ctx.getFilesDir(), "feed").listFiles((x, n) -> n.startsWith("wall_") && n.endsWith(".jpg"));
+        File[] walls = new File(Config.dir(ctx), "feed").listFiles((x, n) -> n.startsWith("wall_") && n.endsWith(".jpg"));
         return walls == null ? new ArrayList<>() : new ArrayList<>(Arrays.asList(walls));
     }
 

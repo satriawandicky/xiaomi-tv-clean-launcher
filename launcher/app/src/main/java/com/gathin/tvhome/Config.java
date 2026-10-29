@@ -121,8 +121,15 @@ final class Config {
     }
 
     /** The folder the theme tools push into; null when external storage is unavailable. */
+    /**
+     * Where config.json, the wallpaper and InfoFeed's cache live. Android 11+ keeps the app's external files
+     * folder private to the app (and adb, so tools/theme.sh can push there). On Android 8-10 any app with
+     * storage permission could write it and steer the launcher, so older TVs use internal storage instead.
+     */
     static File dir(Context ctx) {
-        return ctx.getExternalFilesDir(null);
+        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.R) return ctx.getFilesDir();
+        File d = ctx.getExternalFilesDir(null);
+        return d != null ? d : ctx.getFilesDir();
     }
 
     static Config load(Context ctx) {
