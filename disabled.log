@@ -1,0 +1,27 @@
+# packages disabled by this debloat (one per line), read by restore.sh
+com.miui.tv.analytics
+com.xiaomi.statistic
+com.xiaomi.tvqs.overseas.y24
+com.google.android.feedback
+com.mitv.tvhome.atv
+com.mitv.tvhome.michannel
+com.mitv.tvhome.mitvplus
+com.mitv.tvhome.oemtab
+com.xm.webcontent
+android.autoinstalls.config.google.gtvpai
+com.xiaomi.mitv.tvmanager
+com.xiaomi.mitv.updateservice
+com.mitv.upgrader
+com.mediatek.tv.systemupdater
+com.amazon.amazonvideo.livingroom
+com.google.android.youtube.tv
+com.google.android.videos
+com.google.android.play.games
+com.xiaomi.mimusic2
+com.mitv.gallery
+com.google.android.apps.mediashell
+com.xiaomi.mitv.smartshare
+com.xiaomi.wfdsinkhelperservice
+com.xiaomi.mi_connect_service
+com.google.android.katniss
+com.google.android.apps.tv.dreamx

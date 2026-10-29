@@ -1,0 +1,8 @@
+*.png
+build.log
+shots/
+backup/
+launcher/.gradle/
+launcher/app/build/
+launcher/build/
+launcher/local.properties
